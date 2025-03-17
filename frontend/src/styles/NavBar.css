@@ -1,0 +1,36 @@
+.NavBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  border-bottom: 1px solid;
+}
+
+.HomeButton {
+  font-size: 1.5rem;
+  color: black;
+}
+.AddQuestionsButton {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.SearchBar {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 8px 12px;
+  width: 150px;
+  background-color: transparent;
+  color: black;
+  margin-top: -100px;
+  outline: none;
+}
+
+.searchContainer {
+  justify-content: flex-start;
+}
+
+.SearchBar::placeholder {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  background: rgba(99, 97, 97, 0.462);
+}

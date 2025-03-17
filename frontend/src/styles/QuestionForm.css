@@ -1,0 +1,10 @@
+.Answers-form {
+  display: flex;
+  flex-direction: column;
+  text-decoration: underline;
+  font-size: smaller;
+  color: rgb(20, 82, 182);
+}
+
+.Answer-question {
+}

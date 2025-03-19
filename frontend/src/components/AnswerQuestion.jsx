@@ -1,20 +1,29 @@
 import { useContext, useRef } from "react";
 import { GlobalContext } from "../context/GlobalContextProvider";
 
+// This component allows users to submit an answer to a question
 export function AnswerQuestion({ id }) {
+  // Get pushToDatabase function from GlobalContext
   const { pushToDatabase } = useContext(GlobalContext);
+
+  // useRef is used to access input fields without storing values in state
   const inputAnswer = useRef();
   const contributor = useRef();
 
+  // Function that runs when the form is submitted
   const handleOnSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevents the page from reloading when submitting the form
+
+    // Check if inputAnswer is defined
     if (!inputAnswer) return;
 
+    // Create an object with the answer content and contributor name
     const result = {
-      content: inputAnswer.current.value,
+      content: inputAnswer.current.value, // Get the answer text from the input field
       contributor: contributor.current.value,
     };
 
+    // Send the answer to the database using an API call
     pushToDatabase(`/api/answer/post/${id}`, result, "answer");
   };
 
@@ -32,7 +41,9 @@ export function AnswerQuestion({ id }) {
         className="AnswerQuestionTextarea"
         placeholder="Write your answer here..."
       />
-      <button className="SubmitAnswer" type="submit">Post answer</button>
+      <button className="SubmitAnswer" type="submit">
+        Post answer
+      </button>
     </form>
   );
 }

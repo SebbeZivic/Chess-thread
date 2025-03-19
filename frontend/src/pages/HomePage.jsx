@@ -2,7 +2,7 @@ import { QuestionList } from "../components/QuestionList";
 
 function HomePage() {
   return (
-    <div className="">
+    <div>
       <main>
         <h1>Questions</h1>
         <QuestionList />

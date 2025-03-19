@@ -5,7 +5,7 @@ function AppLayout() {
   return (
     <div>
       <NavBar />
-      <Outlet /> {/* Navbaren är alltid kvar, bara outlet som ändras */}
+      <Outlet /> {/* Navbar is always there, only the outlet that changes */}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-# Projekt Namn
+Chess Thread
 
 ## Kort beskrivning av projektet
 

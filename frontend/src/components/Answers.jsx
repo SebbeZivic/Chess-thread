@@ -13,6 +13,7 @@ export function Answers({ id }) {
   useEffect(() => {
     // Fetch answers from the API using the provided question ID
     fetchData({
+      endpoint: `/api/answer/get/`,
       id: id,
       errMsg: "Could not retrieve the answers to this question",
     }).then((data) => setAnswers(data || [])); // Store the retrieved answers in state
